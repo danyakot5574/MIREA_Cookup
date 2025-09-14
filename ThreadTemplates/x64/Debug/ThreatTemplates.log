@@ -1,0 +1,28 @@
+﻿  main.cpp
+C:\Users\k0tk3\source\repos\ThreatTemplates\ThreatTemplates\NewPattern.h(34,12): warning C4473: "scanf_s": передано недостаточно аргументов для строки формата
+  (компиляция исходного файла "main.cpp")
+      C:\Users\k0tk3\source\repos\ThreatTemplates\ThreatTemplates\NewPattern.h(34,12):
+      заполнители и их параметры ожидают переменное число аргументов в количестве 2, но было предоставлено 1
+      C:\Users\k0tk3\source\repos\ThreatTemplates\ThreatTemplates\NewPattern.h(34,12):
+      отсутствующий вариативный аргумент "2" требуется для строки форматирования "%c"
+      C:\Users\k0tk3\source\repos\ThreatTemplates\ThreatTemplates\NewPattern.h(34,12):
+      этот аргумент используется в качестве размера буфера
+  
+C:\Users\k0tk3\source\repos\ThreatTemplates\ThreatTemplates\LoadPattern.h(43,11): warning C4473: "scanf_s": передано недостаточно аргументов для строки формата
+  (компиляция исходного файла "main.cpp")
+      C:\Users\k0tk3\source\repos\ThreatTemplates\ThreatTemplates\LoadPattern.h(43,11):
+      заполнители и их параметры ожидают переменное число аргументов в количестве 2, но было предоставлено 1
+      C:\Users\k0tk3\source\repos\ThreatTemplates\ThreatTemplates\LoadPattern.h(43,11):
+      отсутствующий вариативный аргумент "2" требуется для строки форматирования "%c"
+      C:\Users\k0tk3\source\repos\ThreatTemplates\ThreatTemplates\LoadPattern.h(43,11):
+      этот аргумент используется в качестве размера буфера
+  
+C:\Users\k0tk3\source\repos\ThreatTemplates\ThreatTemplates\main.cpp(20,17): warning C4473: "scanf_s": передано недостаточно аргументов для строки формата
+      C:\Users\k0tk3\source\repos\ThreatTemplates\ThreatTemplates\main.cpp(20,17):
+      заполнители и их параметры ожидают переменное число аргументов в количестве 2, но было предоставлено 1
+      C:\Users\k0tk3\source\repos\ThreatTemplates\ThreatTemplates\main.cpp(20,17):
+      отсутствующий вариативный аргумент "2" требуется для строки форматирования "%c"
+      C:\Users\k0tk3\source\repos\ThreatTemplates\ThreatTemplates\main.cpp(20,17):
+      этот аргумент используется в качестве размера буфера
+  
+  ThreatTemplates.vcxproj -> C:\Users\k0tk3\source\repos\ThreatTemplates\x64\Debug\ThreatTemplates.exe

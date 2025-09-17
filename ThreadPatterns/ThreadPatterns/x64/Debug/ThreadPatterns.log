@@ -1,0 +1,28 @@
+﻿  main.cpp
+C:\Users\k0tk3\source\repos\ThreadPatterns\ThreadPatterns\PatternFunctions.h(93,12): warning C4473: "scanf_s": передано недостаточно аргументов для строки формата
+  (компиляция исходного файла "main.cpp")
+      C:\Users\k0tk3\source\repos\ThreadPatterns\ThreadPatterns\PatternFunctions.h(93,12):
+      заполнители и их параметры ожидают переменное число аргументов в количестве 2, но было предоставлено 1
+      C:\Users\k0tk3\source\repos\ThreadPatterns\ThreadPatterns\PatternFunctions.h(93,12):
+      отсутствующий вариативный аргумент "2" требуется для строки форматирования "%c"
+      C:\Users\k0tk3\source\repos\ThreadPatterns\ThreadPatterns\PatternFunctions.h(93,12):
+      этот аргумент используется в качестве размера буфера
+  
+C:\Users\k0tk3\source\repos\ThreadPatterns\ThreadPatterns\PatternFunctions.h(161,11): warning C4473: "scanf_s": передано недостаточно аргументов для строки формата
+  (компиляция исходного файла "main.cpp")
+      C:\Users\k0tk3\source\repos\ThreadPatterns\ThreadPatterns\PatternFunctions.h(161,11):
+      заполнители и их параметры ожидают переменное число аргументов в количестве 2, но было предоставлено 1
+      C:\Users\k0tk3\source\repos\ThreadPatterns\ThreadPatterns\PatternFunctions.h(161,11):
+      отсутствующий вариативный аргумент "2" требуется для строки форматирования "%c"
+      C:\Users\k0tk3\source\repos\ThreadPatterns\ThreadPatterns\PatternFunctions.h(161,11):
+      этот аргумент используется в качестве размера буфера
+  
+C:\Users\k0tk3\source\repos\ThreadPatterns\ThreadPatterns\main.cpp(16,17): warning C4473: "scanf_s": передано недостаточно аргументов для строки формата
+      C:\Users\k0tk3\source\repos\ThreadPatterns\ThreadPatterns\main.cpp(16,17):
+      заполнители и их параметры ожидают переменное число аргументов в количестве 2, но было предоставлено 1
+      C:\Users\k0tk3\source\repos\ThreadPatterns\ThreadPatterns\main.cpp(16,17):
+      отсутствующий вариативный аргумент "2" требуется для строки форматирования "%c"
+      C:\Users\k0tk3\source\repos\ThreadPatterns\ThreadPatterns\main.cpp(16,17):
+      этот аргумент используется в качестве размера буфера
+  
+  ThreadPatterns.vcxproj -> C:\Users\k0tk3\source\repos\ThreadPatterns\x64\Debug\ThreadPatterns.exe

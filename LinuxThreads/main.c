@@ -26,12 +26,14 @@ void printHelp()
 
 void runPattern(int * argc, char ** argv)
 {
-	for(int i = 2; i < *argc; ++i)
-		if(isdigit(argv[i]) == 0)
+	for(int i = 0; i < *argc - 2; ++i)
+	{
+		if(isdigit(*(argv[i + 2])) == 0)
 		{
 			printf("Bad usage!\nTry './test -h' for more information.\n");
 			return;
 		}
+	}
 
 	pthread_t threads[*argc - 1];
 	int data[*argc - 1][2];
@@ -65,7 +67,7 @@ int initArg(int * argc, char ** argv)
 		return 0;
 	}
 
-	if(strcmp(argv[1], "-p") == 0 || strcmp(argv[1], "--run") == 0)
+	if(strcmp(argv[1], "-r") == 0 || strcmp(argv[1], "--run") == 0)
 	{
 		runPattern(argc, argv);
 		return 0;

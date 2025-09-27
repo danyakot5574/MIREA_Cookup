@@ -20,7 +20,7 @@ void* threadFunction(void* data)
 
 void printHelp()
 {
-	printf("\nHelp menu\n\t-h - show this menu\n\t-r [args] - run pattern [args]\n\n");
+	printf("\nHelp menu\n\t-h (--help) - show this menu\n\t-r [args] (--run [args]) - run pattern [args]\n\n");
 }
 
 void runPattern(int * argc, char ** argv)
@@ -51,13 +51,13 @@ void runPattern(int * argc, char ** argv)
 
 int initArg(int * argc, char ** argv)
 {
-	if(strcmp(argv[1], "-h") == 0)
+	if(strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0)
 	{
 		printHelp();
 		return 0;
 	}
 
-	if(strcmp(argv[1], "-p") == 0)
+	if(strcmp(argv[1], "-p") == 0 || strcmp(argv[1], "--run") == 0)
 	{
 		runPattern(argc, argv);
 		return 0;
@@ -69,7 +69,9 @@ int main(int argc, char** argv)
 	printf("Start\n");
 
 	if(argc > 1)
-		initArg(&argc, argv);	
+		initArg(&argc, argv);
+	else
+		printf("Bad usage!\nTry './test -h' for more information.\n");	
 
 	printf("End\n");
 

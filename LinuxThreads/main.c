@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 void* threadFunction(void* data)
 {
@@ -20,11 +21,18 @@ void* threadFunction(void* data)
 
 void printHelp()
 {
-	printf("\nHelp menu\n\t-h (--help) - show this menu\n\t-r [args] (--run [args]) - run pattern [args]\n\n");
+	printf("\nHelp menu\n\t-h (--help) - show this menu\n\t-r <int>[args] (--run <int>[args]) - run pattern [args]\n\n");
 }
 
 void runPattern(int * argc, char ** argv)
 {
+	for(int i = 2; i < *argc; ++i)
+		if(isdigit(argv[i]) == 0)
+		{
+			printf("Bad usage!\nTry './test -h' for more information.\n");
+			return;
+		}
+
 	pthread_t threads[*argc - 1];
 	int data[*argc - 1][2];
 
@@ -62,6 +70,9 @@ int initArg(int * argc, char ** argv)
 		runPattern(argc, argv);
 		return 0;
 	}
+
+	printf("Bad usage!\nTry './test -h' for more informaiton.\n");
+	return 0;
 }
 
 int main(int argc, char** argv)

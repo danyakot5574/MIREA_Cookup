@@ -19,21 +19,20 @@ void* threadFunction(void* data)
 }
 
 
-void printHelp()
+int printHelp()
 {
 	printf("\nHelp menu\n\t-h (--help) - show this menu\n\t-r <int>[args] (--run <int>[args]) - run pattern [args]\n\n");
+	return 0;
 }
 
-void runPattern(int * argc, char ** argv)
+int runPattern(int * argc, char ** argv)
 {
+	if(*argc < 3)
+		return 1;
+
 	for(int i = 0; i < *argc - 2; ++i)
-	{
 		if(isdigit(*(argv[i + 2])) == 0)
-		{
-			printf("Bad usage!\nTry './test -h' for more information.\n");
-			return;
-		}
-	}
+			return 1;
 
 	pthread_t threads[*argc - 1];
 	int data[*argc - 1][2];
@@ -51,42 +50,41 @@ void runPattern(int * argc, char ** argv)
 		if(result != 0)
 		{
 			perror("Ошибка создания потока\n");
-			return;
+			return 0;
 		}
 	}
 
 	for(int i = 0; i < *argc - 2; i++)
 		pthread_join(threads[i], NULL);
+
+	return 0;
 }
 
 int initArg(int * argc, char ** argv)
 {
+	int result = 2;
+
 	if(strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0)
 	{
-		printHelp();
-		return 0;
+		result = printHelp();
 	}
-
-	if(strcmp(argv[1], "-r") == 0 || strcmp(argv[1], "--run") == 0)
+	else if(strcmp(argv[1], "-r") == 0 || strcmp(argv[1], "--run") == 0)
 	{
-		runPattern(argc, argv);
-		return 0;
+		result = runPattern(argc, argv);
 	}
 
-	printf("Bad usage!\nTry './test -h' for more informaiton.\n");
+	if(result == 1 || result == 2)
+		printf("Bad usage!\nTru './test -h' for more information.\n");
+
 	return 0;
 }
 
 int main(int argc, char** argv)
 {
-	printf("Start\n");
-
 	if(argc > 1)
 		initArg(&argc, argv);
 	else
 		printf("Bad usage!\nTry './test -h' for more information.\n");	
-
-	printf("End\n");
-
+	
 	return 0;
 }
